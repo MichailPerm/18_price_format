@@ -11,10 +11,8 @@ class TestPriceFormatter(unittest.TestCase):
                                               grouping=True)
                          )
 
-
     def test_uncorrect_data_type(self):
         self.assertIsNone(format_price.format_price(6452.00))
-
 
     def test_uncorrect_data_str(self):
         self.assertIsNone(format_price.format_price('This thing'))
