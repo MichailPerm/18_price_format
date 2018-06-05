@@ -11,12 +11,6 @@ To launch program, type in console:
 Price 3425.42 formatted as 3 425
 ```
 
-In case of empty or literal argument, program print message:
-```bash
-(lenv) E:\lproj\18_price_format>python format_price.py -p adsfads
-Incorrect price argument was passed!
-```
-
 Using it like a module:
 ```bash
 (lenv) E:\lproj\18_price_format>python
@@ -33,7 +27,7 @@ In case of testing:
 (lenv) E:\lproj\18_price_format>python tests.py
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.001s
+Ran 2 tests in 0.001s
 
 OK
 ```
