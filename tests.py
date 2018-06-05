@@ -2,6 +2,8 @@ import unittest
 import format_price
 import locale
 
+class TestClass():
+    pass
 
 class TestPriceFormatter(unittest.TestCase):
 
@@ -11,12 +13,11 @@ class TestPriceFormatter(unittest.TestCase):
                                               grouping=True)
                          )
 
-    def test_uncorrect_data_type(self):
-        self.assertIsNone(format_price.format_price(6452.00))
-
-    def test_uncorrect_data_str(self):
-        self.assertIsNone(format_price.format_price('This thing'))
-
+    def test_uncorrect_data(self):
+        test_data_list = ['dfsd', '123,34', [1, 2, 3], {'key', 'value'}, (1, 2,), TestClass()]
+        for test_data in test_data_list:
+            with self.assertRaises((TypeError, ValueError, NameError)):
+                format_price.format_price(test_data)
 
 if __name__ == '__main__':
     unittest.main()
