@@ -4,7 +4,7 @@ import locale
 
 def format_price(price):
     locale.setlocale(locale.LC_ALL, '')
-    return locale.format_string("%d", float(price), grouping=True)
+    return locale.format_string('%.2f', float(price), grouping=True)
 
 
 def get_args():

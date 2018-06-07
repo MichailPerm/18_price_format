@@ -24,10 +24,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 In case of testing:
 ```bash
-(lenv) E:\lproj\18_price_format>python tests.py
-...
+.......
 ----------------------------------------------------------------------
-Ran 2 tests in 0.001s
+Ran 7 tests in 0.001s
 
 OK
 ```
