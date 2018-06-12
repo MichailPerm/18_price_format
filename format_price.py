@@ -2,6 +2,8 @@ import argparse
 
 
 def format_price(price):
+    if price is True or not price:
+        return None
     try:
         price_float = float(price)
         price_comma = '{:,.2f}'.format(price_float)
