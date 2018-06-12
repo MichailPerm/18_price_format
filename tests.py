@@ -11,9 +11,7 @@ class TestPriceFormatter(unittest.TestCase):
 
     def test_correct_price(self):
         self.assertEqual(
-            format_price.format_price('3245.000000'),
-            locale.format_string('%.2f', float('3245'),
-            grouping=True)
+            format_price.format_price('3245.000000'), '3\u202f245,00'
         )
 
     def test_string_data(self):

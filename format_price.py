@@ -1,10 +1,13 @@
 import argparse
-import locale
 
 
 def format_price(price):
-    locale.setlocale(locale.LC_ALL, '')
-    return locale.format_string('%.2f', float(price), grouping=True)
+    try:
+        price_float = float(price)
+        price_comma = '{:,.2f}'.format(price_float)
+        return price_comma.replace(',', ' ')
+    except(ValueError, TypeError):
+        return None
 
 
 def get_args():
@@ -21,4 +24,6 @@ def get_args():
 if __name__ == '__main__':
     args = get_args()
     formatted_price = format_price(args.price)
-    print('Price {} formatted as {}'.format(args.price, formatted_price))
+    if not formatted_price:
+        exit('Wrong value got from --price parameter')
+    exit('Price {} formatted as {}'.format(args.price, formatted_price))
