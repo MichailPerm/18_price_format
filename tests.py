@@ -8,9 +8,14 @@ class TestClass():
 
 class TestPriceFormatter(unittest.TestCase):
 
-    def test_correct_price(self):
+    def test_correct_price_zero_end(self):
         self.assertEqual(
-            format_price.format_price('3245.000000'), '3 245.00'
+            format_price.format_price('3245.000000'), '3 245'
+        )
+
+    def test_correct_price_not_zero_end(self):
+        self.assertEqual(
+            format_price.format_price('3245.1233'), '3 245.12'
         )
 
     def test_string_data(self):
@@ -21,7 +26,7 @@ class TestPriceFormatter(unittest.TestCase):
 
     def test_integer_data(self):
         self.assertEqual(
-            format_price.format_price(4320984), '4 320 984.00'
+            format_price.format_price(4320984), '4 320 984'
         )
 
     def test_float_data(self):

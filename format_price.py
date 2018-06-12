@@ -6,7 +6,9 @@ def format_price(price):
         return None
     try:
         price_float = float(price)
-        price_comma = '{:,.2f}'.format(price_float)
+        price_comma = '{:,.2f}'.format(
+            price_float
+        ).rstrip('0').rstrip('.')
         return price_comma.replace(',', ' ')
     except(ValueError, TypeError):
         return None

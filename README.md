@@ -8,7 +8,7 @@ price, according to current locale.
 To launch program, type in console:
 ```bash
 (lenv) E:\lproj\18_price_format>python format_price.py -p 3425.42
-Price 3425.42 formatted as 3 425,42
+Price 3425.42 formatted as 3 425.42
 ```
 
 Using it like a module:
@@ -26,7 +26,7 @@ In case of testing:
 ```bash
 .......
 ----------------------------------------------------------------------
-Ran 14 tests in 0.001s
+Ran 15 tests in 0.001s
 
 OK
 ```
