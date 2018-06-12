@@ -8,7 +8,7 @@ price, according to current locale.
 To launch program, type in console:
 ```bash
 (lenv) E:\lproj\18_price_format>python format_price.py -p 3425.42
-Price 3425.42 formatted as 3 425
+Price 3425.42 formatted as 3 425,42
 ```
 
 Using it like a module:
@@ -18,7 +18,7 @@ Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Inte
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import format_price
 >>> format_price.format_price('342134.0000')
-'342\xa0134'
+'342\xa0134,00'
 >>>
 ```
 
@@ -26,7 +26,7 @@ In case of testing:
 ```bash
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.001s
+Ran 12 tests in 0.001s
 
 OK
 ```
