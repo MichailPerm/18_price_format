@@ -2,7 +2,7 @@ import argparse
 
 
 def format_price(price):
-    if price is True or not price:
+    if isinstance(price, bool):
         return None
     try:
         price_float = float(price)
